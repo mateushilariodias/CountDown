@@ -12,6 +12,8 @@
     min-height: 300px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 1rem;
+    padding: 20px; /* Adicionar algum padding para espaçamento interno */
+    box-sizing: border-box; /* Isso faz com que o padding não adicione ao tamanho total do contêiner */
 }
 
 .countdown-container {
@@ -20,4 +22,15 @@
   align-items: center;
   height: 200px;
   gap: 2rem;
+}
+
+/* Este é um exemplo de consulta de mídia para ajustar o layout para telas menores */
+@media (max-width: 600px) {
+  .container {
+    width: 90%; /* Ajuste a largura do contêiner para 90% para deixar algum espaço ao redor */
+  }
+  .countdown-container {
+    flex-direction: column; /* Mudar para uma coluna em vez de uma linha */
+    height: auto; /* Permitir que a altura se ajuste ao conteúdo */
+  }
 }

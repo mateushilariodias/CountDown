@@ -4,3 +4,18 @@
     font-size: 2.4rem;
 }
 
+/* Para tablets em modo retrato e para telefones celulares */
+@media only screen and (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+}
+
+/* Para dispositivos menores (telefones celulares em modo retrato) */
+@media only screen and (max-width: 480px) {
+    .title {
+        font-size: 1.6rem;
+    }
+}
+
+

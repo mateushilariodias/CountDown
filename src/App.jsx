@@ -6,7 +6,14 @@ import useCountdown from './hooks/useCountdown'
 
 function App() {
 
-  const [day, hour, minute, second] = useCountdown("Set 15, 2023 17:40:00");
+  const myDate = "Sep 15, 2023 17:40:00"; // Substitua por sua própria data
+
+  if (isNaN(new Date(myDate))) {
+    console.error("Data inválida fornecida para a contagem regressiva!");
+    return null; // Interromper a renderização do componente
+  }
+
+  const [day, hour, minute, second] = useCountdown(myDate);
   
   return (
     <div className="App" style={{ backgroundImage:`url(${PaisagemCaminhada})`}}>
